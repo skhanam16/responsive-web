@@ -1,0 +1,77 @@
+
+
+.container{ /* ***only this one making the whole container 
+    on the viewport center margin: 30px auto; we can put o or put some space by 30px will create some space between top of the window and container. this will make the container in the center of view port 
+    /* this will turn into a grid container /*
+    /* grid-template-rows: repeat(2, 300px); will keep the row height equal*/
+    /*this is height of rows 150px 150px */
+    /* in flex if we set the flex property 1 it will basically expand and occupy all the possible space*/
+    /* in grid it has simmilar functionality called fractional unit*/
+background: #eee;
+width: 1000px;
+margin: 30px auto;
+}
+
+.row{
+background: rgb(216, 198, 111);
+display: grid;
+grid-template-rows: repeat(2, 300px);
+/* grid-template-columns: repeat(2, 150px) 1fr; keep for reference two equal and one large column*/
+/* grid-row-gap: 20px;
+grid-column-gap: 20px; */
+/* grid-template-columns: repeat(3, 1fr); */
+/* VERY IMPORTANT FOR EQUAL WIDTH this will create columns with each of them same width */
+/* we can also do middle column larger than left and right column it in below ways */
+/* grid-template-columns: 1fr 2fr 1fr; */
+/* we can also use % */
+/* grid-template-columns: 50% 2fr 1fr; */
+/* we can also use % */
+/* ****view port less than 700px it will show only one column*/
+grid-template-columns: 1fr;
+/*we can control each item  gap by grid-gap in mobile or large view port */
+/* fr not only works on column it also works on row  it will basically expand and occupy all the possible space*/
+grid-gap: 20px;
+}
+
+.item{
+padding: 20px;
+font-size: 20px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.col-1-of-2{
+background: orange;
+}
+
+.col-1-of-3{
+background: orangered;
+}
+
+.col-1-of-4{
+background: orchid;
+}
+
+.item--1{
+background: orange;
+}
+.item--2{
+background: green;
+}
+.item--3{
+background: violet;
+}
+.item--4{
+background: Pink;
+}
+.item--5{
+background: blue;
+}
+.item--6{
+background: brown;
+}
+
+@media (min-width: 700px){
+    .row{
+        grid-template-columns: 50% 2fr 1fr;
+    }
+}

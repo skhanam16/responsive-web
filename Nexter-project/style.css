@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* ====GLOBAL VARIABLES==== */
+
+:root{
+    --primary-color: rgb(240, 120, 9);
+    --secondary-coor: rgb(54, 11, 211);
+ }
+
+    /* ====GRID CONTAINER==== */
+.container{
+   /* width: 100vw;
+   margin: 0 auto; */
+   display: grid;
+   grid-template-rows: 100vh min-content 25vw repeat(2, min-content) 10vh;
+   /* grid-template-rows: 80vh repeat(5, min-content) 40vw; */
+   grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 13rem) [col-end] ) [center-end] 1fr [full-end];
+   
+ 
+ }
+
+ .container .nav-menu{
+    background-color: blueviolet;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    grid-row-start: 1;
+    grid-row-end: 4;
+ 
+ }
+
+ .header{
+   background-color: darkcyan;
+ }
+ 
+ /* ====NAVIGATION WITH FLEX==== */
+ 
+ .nav-menu{
+ /* background-color:brown; */
+ max-width: auto;
+ height: 80px;
+ margin: 0 auto;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ 
+ }
+
+ 
+ .nav-menu ul li {
+ list-style-type: none;
+ margin: 20px;
+ float: left;
+ text-align: center;
+ }
+ 
+ .nav-menu ul li a{
+ text-decoration: none;
+ font-size: 18px;
+ color: white;
+ 
+ }
+ 
+ .nav-menu ul li a:hover{
+    border-bottom: 2px solid red;
+ }
+
+
+ .realtours{
+   background-color: darkolivegreen;
+   grid-column: full-start / full-end;
+ }
+
+ .features{
+   background-color: darkkhaki;
+   grid-column: center-start / center-end;
+ }
+
+ .story{
+   background-color: darkgoldenrod;
+   grid-column: center-start / center-end;
+  
+  
+ }
+
+ .story__pictures{
+   background-color: lightseagreen;
+   grid-column: center-start / col-end 4;
+ }
+
+ .story__content{
+   background-color: lightcoral;
+   grid-column: col-start 5 / center-end;
+ }
+
+ .homes{
+   background-color: darkgray;
+   grid-column: center-start / center-end;
+   
+ }
+
+
+ .gallery{
+   grid-column: center-start / center-end;
+   background-color: darkorchid;
+ }
+
+ .footer{
+   /* height: 10vh;
+   width: 100%; */
+   background-color: black;
+   grid-column: full-start / full-end;
+ }

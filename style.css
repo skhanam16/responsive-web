@@ -1,0 +1,261 @@
+/* ====UNIVERSAL SELECTOR==== */
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* ====GLOBAL VARIABLES==== */
+
+:root{
+   --primary-color: rgb(240, 120, 9);
+   --secondary-coor: rgb(54, 11, 211);
+}
+
+/* ====NAVIGATION WITH FLEX==== */
+
+#nav-menu{
+background-color:brown;
+max-width: auto;
+height: 80px;
+margin: 0 auto;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+}
+
+
+#nav-menu ul li {
+list-style-type: none;
+margin: 20px;
+float: left;
+text-align: center;
+}
+
+#nav-menu ul li a{
+text-decoration: none;
+font-size: 18px;
+color: white;
+
+}
+
+#nav-menu ul li a:hover{
+   border-bottom: 2px solid red;
+}
+
+.div1{
+   background-color: var(--primary-color);
+   width: 300px;
+   padding: 20px;
+   box-sizing: border-box;
+}
+
+.div2{
+  background-color: blueviolet;
+   width: 300px;
+}
+
+.img1:hover{
+  opacity: 0.5;
+  cursor:grab;
+}
+
+.div3{
+   border: 2px solid green;
+   padding: 5px;
+   position: static;
+   top: 20px;
+}
+.div4{
+   
+   border: 2px solid rebeccapurple;
+   padding: 5px;
+ 
+}
+
+.div5{
+   
+   border: 4px solid rgb(195, 14, 231);
+   padding: 5px;
+   /* position: fixed; */
+   /* bottom: 50px; */
+ 
+}
+
+.div6{
+   border:4px solid  rgb(43, 4, 31);
+   position: absolute;
+   width: 100px;
+   height: 100px;
+   overflow:scroll;
+   bottom: 50px;
+}
+
+.div7{
+   border:4px solid var(--primary-color);
+   height: 250px;
+   width: 250px;
+   background-color: var(--secondary-coor);
+   position: absolute;
+   z-index: 3;
+   /* position: absolute; */
+}
+
+.div8{
+   border:4px solid  rgb(109, 6, 104);
+   height: 250px;
+   width: 250px;
+   background-color: brown;
+   position: absolute;
+   top: 200px;
+   left: 150px;
+   z-index: 2;
+}
+
+/* ====FLEXIBLE BOX ====*/
+
+.flex-container{
+  background-color: aqua;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+}
+.flex-container > div{
+   background-color: rgb(147, 147, 180);
+   /* box-shadow: 2px 2px 2px red; */
+   font-size: 18px;
+   margin: 10px;
+   padding: 20px;;
+}
+
+.flex-container > div:hover{
+   box-shadow: 2px 2px 2px red;
+
+}
+
+/* ====CARD CONTAINER FLEX BOX==== */
+
+   .card-container{
+   box-sizing: border-box;
+   padding: 20px 0;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   }
+
+   .card{
+   width: 300px;
+   margin: 10px;
+   box-sizing: border-box;
+   box-shadow: 3px 2px 5px rgb(75, 74, 74);
+   }
+
+   .card .card-img1{
+   width: 100%;
+   }
+
+   .card .card-body{
+   /* border: 1px solid red; */
+   margin-top: -5px;
+   padding: 10px;
+   background-color: rgb(206, 206, 206);
+   }
+
+   .card .card-body .card-title{
+   font-size: 2rem;
+   }
+
+   .card .card-body .card-description{
+   font-size: 1rem;
+
+   /* text-align: justify; */
+   line-height: 1.5;
+   }
+
+   .card:hover{
+   box-shadow: 5px 5px 12px rgb(161, 160, 160);
+   }
+
+   /* ====GRID CONTAINER==== */
+.grid-container{
+   display: grid;
+   grid-template-columns: auto auto auto auto;
+   grid-gap: 5px 10px;
+   align-content: center;
+
+}
+
+.grid-container > div{
+   background-color: aqua;
+   border: 1px solid black;
+   padding: 5px;
+
+}
+
+.grid-container .item1{
+   background-color: blueviolet;
+   grid-column: 1 / span 2;
+   grid-row-start: 1;
+   grid-row-end: 4;
+
+}
+
+/* ====WEB PAGE LAYOUT - GRID CONTAINER2==== */
+
+.header{
+   grid-area: header;
+   background-color: rgb(170, 113, 223);
+}
+.navigation{
+   grid-area: navigation;
+   background-color: rgb(144, 179, 167);
+}
+
+.sidebar1{
+   grid-area: sidebar1;
+   background-color: rgb(109, 109, 179);
+}
+
+.sidebar2{
+   grid-area: sidebar2;
+   background-color: rgb(93, 177, 177);
+}
+
+.main{
+   grid-area: main;
+   background-color: rgb(209, 151, 81);
+}
+
+.footer{
+   grid-area: footer;
+   background-color: rgb(179, 105, 105);
+}
+
+.grid-container2{
+   margin-top: 20px;
+   display: grid;
+   /* grid-template-columns: repeat(auto-fill, minmax(200px ,1fr)); */
+   grid-template-columns: 20% 60% 20%;
+   border: 2px solid black;
+   grid-template-areas:
+   'header header header'
+   'navigation navigation navigation'
+   '.  main . '
+   'footer footer footer'
+   ;
+  
+}
+.grid-container2 > div{
+   text-align: center;
+   font-size: 1.5rem;
+
+   /* border: 2px solid red; */
+}
+

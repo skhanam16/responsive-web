@@ -1,0 +1,58 @@
+
+
+.container{ /* ***only this one making the whole container 
+            on the viewport center margin: 30px auto; we can put o or put some space by 30px will create some space between top of the window and container. this will make the container in the center of view port 
+            /* this will turn into a grid container /**/
+            /*this is height of rows 150px 150px */
+  
+    background: #eee;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.row{
+    background: rgb(216, 198, 111);
+    display: grid;
+    grid-template-rows: 150px 150px;
+    grid-template-columns: 150px 150px 150px;
+   /* grid-row-gap: 20px;
+   grid-column-gap: 20px; */
+   grid-gap: 20px;
+}
+
+.item{
+    padding: 20px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.col-1-of-2{
+    background: orange;
+}
+
+.col-1-of-3{
+    background: orangered;
+}
+
+.col-1-of-4{
+    background: orchid;
+}
+
+.item--1{
+    background: orange;
+}
+.item--2{
+    background: green;
+}
+.item--3{
+    background: violet;
+}
+.item--4{
+    background: Pink;
+}
+.item--5{
+    background: blue;
+}
+.item--6{
+    background: brown;
+}
